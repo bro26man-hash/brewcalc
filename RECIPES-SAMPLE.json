@@ -1,0 +1,148 @@
+[
+  {
+    "name": "American Pale Ale",
+    "description": "Test recipe for formula validation",
+    "style": "American Pale Ale",
+    "batch_size": 20.0,
+    "boil_size": 10.0,
+    "serving_size": 0.355,
+    "mash_efficiency": 75,
+    "steep_efficiency": 50,
+    "ibu_method": "tinseth",
+    "ingredients": {
+      "fermentable_additions": [
+        {
+          "name": "Pale Malt (2-Row)",
+          "type": "grain",
+          "amount": {"value": 4.2, "unit": "kg"},
+          "yield": {"value": 78, "unit": "%"},
+          "color": {"value": 2.5, "unit": "SRM"},
+          "addition": "mash"
+        },
+        {
+          "name": "CaraMunich",
+          "type": "grain",
+          "amount": {"value": 0.5, "unit": "kg"},
+          "yield": {"value": 78, "unit": "%"},
+          "color": {"value": 20, "unit": "SRM"},
+          "addition": "mash"
+        }
+      ],
+      "hop_additions": [
+        {
+          "name": "Cascade",
+          "alpha_acid": {"value": 5.0, "unit": "%"},
+          "amount": {"value": 0.028, "unit": "kg"},
+          "form": "pellet",
+          "use": "boil",
+          "timing": {"time": 60, "unit": "min"}
+        },
+        {
+          "name": "Centennial",
+          "alpha_acid": {"value": 9.0, "unit": "%"},
+          "amount": {"value": 0.015, "unit": "kg"},
+          "form": "pellet",
+          "use": "boil",
+          "timing": {"time": 15, "unit": "min"}
+        }
+      ],
+      "culture_additions": [
+        {
+          "name": "Wyeast 1056 - American Ale",
+          "type": "ale",
+          "form": "liquid",
+          "attenuation": {"value": 80, "unit": "%"}
+        }
+      ]
+    },
+    "expected_results": {
+      "og": "≈ 1.048",
+      "fg": "≈ 1.012",
+      "abv": "≈ 4.6–4.8%",
+      "ibu_tinseth": "≈ 53–54",
+      "ibu_rager": "≈ 51–52",
+      "srm": "≈ 6.0"
+    }
+  },
+  {
+    "name": "PlINY the Elder Triple IPA",
+    "description": "High-gravity resulting in higher ABV validation",
+    "style": "Triple IPA",
+    "batch_size": 19.0,
+    "boil_size": 6.8,
+    "serving_size": 0.355,
+    "mash_efficiency": 72,
+    "steep_efficiency": 50,
+    "ibu_method": "tinseth",
+    "ingredients": {
+      "fermentable_additions": [
+        {
+          "name": "Maris Otter Pride of Ringwood",
+          "type": "grain",
+          "amount": {"value": 10.5, "unit": "kg"},
+          "yield": {"value": 80, "unit": "%"},
+          "color": {"value": 1.8, "unit": "SRM"},
+          "addition": "mash"
+        },
+        {
+          "name": "Honey Malt",
+          "type": "grain",
+          "amount": {"value": 0.9, "unit": "kg"},
+          "yield": {"value": 83, "unit": "%"},
+          "color": {"value": 25, "unit": "SRM"},
+          "addition": "mash"
+        },
+        {
+          "name": "Dried Malt Extract",
+          "type": "extract",
+          "amount": {"value": 0.9, "unit": "kg"},
+          "yield": {"value": 60, "unit": "%"},
+          "color": {"value": 10, "unit": "SRM"},
+          "addition": "steep"
+        }
+      ],
+      "hop_additions": [
+        {
+          "name": "Centennial",
+          "alpha_acid": {"value": 9.8, "unit": "%"},
+          "amount": {"value": 0.085, "unit": "kg"},
+          "form": "pellet",
+          "use": "boil",
+          "timing": {"time": 60, "unit": "min"}
+        },
+        {
+          "name": "Amarillo",
+          "alpha_acid": {"value": 8.5, "unit": "%"},
+          "amount": {"value": 0.068, "unit": "kg"},
+          "form": "pellet",
+          "use": "boil",
+          "timing": {"time": 15, "unit": "min"}
+        },
+        {
+          "name": "Citra",
+          "alpha_acid": {"value": 12.0, "unit": "%"},
+          "amount": {"value": 0.085, "unit": "kg"},
+          "form": "pellet",
+          "use": "primary",
+          "timing": {"time": 0, "unit": "min"}
+        }
+      ],
+      "culture_additions": [
+        {
+          "name": "White Labs WLP001 - California Ale",
+          "type": "ale",
+          "form": "liquid",
+          "attenuation": {"value": 75, "unit": "%"}
+        }
+      ]
+    },
+    "expected_results": {
+      "og": "≈ 1.100+",
+      "fg": "≈ 1.020-",
+      "abv": "≈ 10%+ (real extract method critical here)",
+      "ibu_tinseth": "≈ 100+",
+      "ibu_rager": "≈ 90+",
+      "srm": "≈ 12-14"
+    }
+  }
+]
